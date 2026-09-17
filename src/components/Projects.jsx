@@ -3,7 +3,7 @@ import { projects } from "../data/portfolio";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-function GlowCard({ children, delay = 0 }) {
+function GlowCard({ children, delay = 0, featured = false }) {
   const ref = useRef(null);
   const onMove = (e) => {
     const el = ref.current;
@@ -20,7 +20,9 @@ function GlowCard({ children, delay = 0 }) {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className="glow-card border border-border bg-panel/40 rounded overflow-hidden hover:border-accent/50 transition group"
+      className={`glow-card border border-border bg-panel/40 rounded overflow-hidden hover:border-accent/50 transition group ${
+        featured ? "shadow-lg shadow-black/50 hover:shadow-xl hover:shadow-black/70" : ""
+      }`}
     >
       {children}
     </motion.div>
@@ -58,20 +60,27 @@ export default function Projects() {
       </h2>
       <div className="space-y-4">
         {projects.map((p, i) => (
-          <GlowCard key={p.name} delay={i * 0.08}>
+          <GlowCard key={p.name} delay={i * 0.08} featured={!!p.screenshot}>
             {p.screenshot && (
               <a
                 href={p.link || "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="block border-b border-border bg-black/20"
+                className="block border-b border-border bg-black/20 relative group/img overflow-hidden"
               >
                 <img
                   src={p.screenshot}
                   alt={`${p.name} screenshot`}
-                  className="w-full max-h-[500px] object-contain opacity-95 hover:opacity-100 transition"
+                  className="w-full max-h-[500px] object-contain opacity-95 transition duration-300 group-hover/img:opacity-60 group-hover/img:scale-[1.02]"
                   loading="lazy"
                 />
+                {p.link && (
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <span className="px-4 py-2 border border-accent bg-bg/80 backdrop-blur text-accent text-sm rounded">
+                      {p.linkLabel || "view live"} →
+                    </span>
+                  </div>
+                )}
               </a>
             )}
             <div className="p-5">
