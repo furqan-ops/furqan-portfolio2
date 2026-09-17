@@ -1,0 +1,4 @@
+﻿export const stats = [
+  { value: 7, suffix: "", label: "Internal tools shipped" },
+  { value: 24, suffix: "/7", label: "Automations running" },
+];
