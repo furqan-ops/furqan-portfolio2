@@ -7,7 +7,7 @@
   role: "Software Engineer",
   current: "Automation & Data @ Applivity",
   blurb:
-    "I build Python scripts and n8n workflows that replace repetitive work — resume parsers, scrapers, attendance systems. If a task is done the same way more than twice, I automate it.",
+    "I build Python scripts and n8n workflows that replace repetitive work — resume parsers, scrapers, attendance systems. Things that save teams hours every week.",
   email: "furqantahir2222@gmail.com",
   phone: "+92 315 0727514",
   github: "https://github.com/furqan-ops",
@@ -20,7 +20,10 @@ export const stats = [
 ];
 
 export const about = [
-  "I'm a software engineer who builds automations — mostly Python scripts and n8n workflows that connect the tools teams already use. I've shipped resume parsers, RFP scrapers, PDF extractors, and a full attendance system, all end-to-end. If accuracy matters and the work is repetitive, that's my kind of problem.",
+  "I write code that runs on its own, so people don't have to.",
+  "Most of my work is Python scripts and n8n workflows that sit between tools and keep things in sync — resume parsers, RFP scrapers, PDF extractors, and an attendance system with admin and employee views.",
+  "I've spent enough time cleaning messy data to know accuracy matters more than speed. If an automation writes something wrong, it's worse than no automation — so I build in checks and flag anything uncertain.",
+  "Based in Rawalpindi. Working remotely with teams across time zones.",
 ];
 
 export const services = [
@@ -52,16 +55,12 @@ export const experience = [
     company: "Applivity",
     location: "Islamabad, Pakistan",
     period: "2024 — Present",
-    summary:
-      "I work across three areas: building automation for recruitment operations, keeping data clean across internal systems, and shipping tools that people in the company actually use every day. The attendance app below is one I built end-to-end here.",
     bullets: [
-      "Built an n8n automation that watches a Google Drive folder, parses resumes as they arrive, extracts name / phone / email, checks for duplicates, and logs new candidates to Google Sheets — replacing a 4-step manual process that used to take hours per batch.",
-      "Added a confidence-check layer so the parser flags uncertain extractions (like unclear names) instead of silently writing wrong data. This caught several edge cases that would have polluted the candidate database.",
-      "Wrote Python + Selenium scripts to scrape and clean web data at scale — used for sourcing and enrichment across multiple internal pipelines.",
-      "Designed and shipped a full attendance web app (Google Apps Script + Firebase + Sheets) with separate admin and employee views. Handles check-in / check-out, leave requests, monthly summaries, and role-based access. Now used daily across the team.",
-      "Built Power BI dashboards for operations and expense reporting, replacing manual spreadsheet compilations that leadership previously waited on each month.",
-      "Managed and cleaned 5,000+ records across Excel, Google Sheets, OpenCATS, and ERPNext — deduplication, verification, and enrichment before ingestion.",
-      "Set up expense-claim escalation rules based on amount thresholds and approval chains — cut manual follow-ups significantly.",
+      "Built an n8n automation that watches a Google Drive folder, parses resumes as they arrive, checks for duplicates, and logs new candidates to Sheets — replacing a 4-step manual process.",
+      "Added a confidence check so the parser flags anything uncertain instead of silently writing wrong data.",
+      "Wrote Python + Selenium scripts to scrape and clean web data at scale.",
+      "Managed and cleaned 5,000+ records across Excel, Sheets, OpenCATS, and ERPNext.",
+      "Built Power BI dashboards used for monthly operations and expense reporting.",
     ],
   },
 ];

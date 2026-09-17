@@ -23,7 +23,7 @@ export default function Section({ id, cmd, path = "~", children }) {
   const typed = useTypewriter(cmd, inView);
 
   return (
-    <section id={id} className="relative z-10 max-w-4xl mx-auto px-6 py-16 md:py-20">
+    <section id={id} className="relative z-10 max-w-4xl mx-auto px-6 py-20 md:py-24">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export default function Section({ id, cmd, path = "~", children }) {
         viewport={{ once: true, margin: "-80px" }}
         transition={{ duration: 0.5 }}
       >
-        <div className="text-sm md:text-base">
+        <div className="text-base md:text-lg">
           <Prompt path={path} cmd={typed} />
         </div>
         {children}

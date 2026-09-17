@@ -7,20 +7,23 @@
   role: "Software Engineer",
   current: "Automation & Data @ Applivity",
   blurb:
-    "I build Python scripts and n8n workflows that replace repetitive work — resume parsers, scrapers, attendance systems. If a task is done the same way more than twice, I automate it.",
+    "I build automations that replace manual, repetitive work — mostly with Python, n8n, and Google Apps Script. Resume parsers, RFP scrapers, attendance systems. Things that save teams hours every week.",
   email: "furqantahir2222@gmail.com",
   phone: "+92 315 0727514",
   github: "https://github.com/furqan-ops",
 };
 
 export const stats = [
-  { value: 7, suffix: "", label: "Tools built & shipped" },
-  { value: 5000, suffix: "+", label: "Records cleaned" },
+  { value: 1500, suffix: "+", label: "Resumes parsed automatically" },
+  { value: 7, suffix: "", label: "Internal tools shipped" },
   { value: 24, suffix: "/7", label: "Automations running" },
 ];
 
 export const about = [
-  "I'm a software engineer who builds automations — mostly Python scripts and n8n workflows that connect the tools teams already use. I've shipped resume parsers, RFP scrapers, PDF extractors, and a full attendance system, all end-to-end. If accuracy matters and the work is repetitive, that's my kind of problem.",
+  "I write code that runs on its own so people don't have to. Most of my work is Python scripts and n8n workflows that sit between tools and quietly keep things in sync.",
+  "I've spent enough time cleaning messy data to know that accuracy matters more than speed. If an automation writes something wrong, it's worse than no automation at all — so I build in checks and flag anything uncertain.",
+  "I've shipped resume parsers, RFP scrapers, PDF extraction tools, and a full attendance system with separate admin and employee views. All of it built end-to-end, from idea to deployed.",
+  "Based in Rawalpindi, working remotely with teams across time zones. Open to software engineering and automation roles — remote or hybrid.",
 ];
 
 export const services = [
@@ -52,16 +55,12 @@ export const experience = [
     company: "Applivity",
     location: "Islamabad, Pakistan",
     period: "2024 — Present",
-    summary:
-      "I work across three areas: building automation for recruitment operations, keeping data clean across internal systems, and shipping tools that people in the company actually use every day. The attendance app below is one I built end-to-end here.",
     bullets: [
-      "Built an n8n automation that watches a Google Drive folder, parses resumes as they arrive, extracts name / phone / email, checks for duplicates, and logs new candidates to Google Sheets — replacing a 4-step manual process that used to take hours per batch.",
-      "Added a confidence-check layer so the parser flags uncertain extractions (like unclear names) instead of silently writing wrong data. This caught several edge cases that would have polluted the candidate database.",
-      "Wrote Python + Selenium scripts to scrape and clean web data at scale — used for sourcing and enrichment across multiple internal pipelines.",
-      "Designed and shipped a full attendance web app (Google Apps Script + Firebase + Sheets) with separate admin and employee views. Handles check-in / check-out, leave requests, monthly summaries, and role-based access. Now used daily across the team.",
-      "Built Power BI dashboards for operations and expense reporting, replacing manual spreadsheet compilations that leadership previously waited on each month.",
-      "Managed and cleaned 5,000+ records across Excel, Google Sheets, OpenCATS, and ERPNext — deduplication, verification, and enrichment before ingestion.",
-      "Set up expense-claim escalation rules based on amount thresholds and approval chains — cut manual follow-ups significantly.",
+      "Built an n8n automation that watches a Google Drive folder, parses resumes as they arrive, checks for duplicates, and logs new candidates to Sheets — replacing a 4-step manual process.",
+      "Added a confidence check so the parser flags anything uncertain instead of silently writing wrong data.",
+      "Wrote Python + Selenium scripts to scrape and clean web data at scale.",
+      "Managed and cleaned 5,000+ records across Excel, Sheets, OpenCATS, and ERPNext.",
+      "Built Power BI dashboards used for monthly operations and expense reporting.",
     ],
   },
 ];
@@ -69,7 +68,6 @@ export const experience = [
 export const projects = [
   {
     name: "attendance-app",
-    featured: true,
     tags: ["Google Apps Script", "JavaScript", "Firebase", "Sheets"],
     desc: "An attendance system that runs entirely inside Google Workspace. Separate admin and employee views — check-in, check-out, leave requests, and monthly summaries. No server, no hosting costs.",
     link: "https://applivity-attendance-app.web.app/",
@@ -82,7 +80,6 @@ export const projects = [
   },
   {
     name: "rfp-lead-generator",
-    featured: true,
     tags: ["Python", "Gemini API", "Sheets", "Gmail"],
     desc: "Runs once a day, checks an RFP feed for new listings, writes a short AI summary of each one, logs it to Sheets, and emails a formatted alert. Skips anything already seen.",
     slides: [
@@ -93,7 +90,6 @@ export const projects = [
   },
   {
     name: "pdf-extraction-tool",
-    featured: true,
     tags: ["Python", "pdfplumber", "Tkinter", "pandas"],
     desc: "A small desktop app for pulling structured info out of resumes. Pick a folder or a single PDF, and it spits out name, email, phone, skills, and education into an Excel file. Has a checkbox UI so you choose which fields to extract.",
     slides: [
@@ -144,6 +140,8 @@ export const faq = [
   { q: "What kind of roles are you open to?", a: "Software engineering, automation engineering, and AI-adjacent roles. Remote or hybrid — anywhere Python, n8n, or workflow automation is central to the work." },
   { q: "Do you work remotely?", a: "Yes. I've been working remote-first with distributed teams, mostly async on Slack and Jira." },
   { q: "What's your main stack?", a: "n8n for orchestration, Python for scraping and data work, Google Apps Script for anything that lives inside Google Workspace, and LLM APIs (Gemini, Claude) when AI helps." },
+  { q: "End-to-end, or just scripts?", a: "End-to-end. I've shipped full apps (attendance system with admin + employee sides), scheduled automations, desktop tools with GUIs, and reporting dashboards." },
 ];
 
 export const footer = { message: "build · ship · automate · repeat" };
+

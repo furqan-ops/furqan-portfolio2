@@ -3,11 +3,10 @@ import ThemeToggle from "./ThemeToggle";
 
 const LINKS = [
   { id: "about", label: "about" },
+  { id: "skills", label: "skills" },
   { id: "services", label: "services" },
   { id: "experience", label: "experience" },
   { id: "projects", label: "work" },
-  { id: "skills", label: "skills" },
-  { id: "faq", label: "faq" },
   { id: "contact", label: "contact" },
 ];
 
@@ -33,7 +32,7 @@ export default function Nav({ onOpenPalette }) {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-4xl mx-auto px-6 py-3 flex items-center gap-4 text-xs">
+      <div className="max-w-4xl mx-auto px-6 py-3 flex items-center gap-4 text-sm">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="text-accent font-semibold"
@@ -54,6 +53,12 @@ export default function Nav({ onOpenPalette }) {
         </div>
 
         <div className="ml-auto flex items-center gap-2">
+          <a
+            href="mailto:furqantahir2222@gmail.com"
+            className="hidden md:inline text-sm border border-accent text-accent rounded px-3 py-1 hover:bg-accent/20 transition font-semibold"
+          >
+            Email Me
+          </a>
           <button
             onClick={onOpenPalette}
             className="hidden md:inline text-xs border border-border rounded px-2 py-1 text-muted hover:border-accent hover:text-accent transition"
