@@ -1,0 +1,39 @@
+﻿import { motion, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import Prompt from "./Prompt";
+
+function useTypewriter(text, active, speed = 35) {
+  const [out, setOut] = useState("");
+  useEffect(() => {
+    if (!active) return;
+    let i = 0;
+    setOut("");
+    const id = setInterval(() => {
+      setOut(text.slice(0, ++i));
+      if (i >= text.length) clearInterval(id);
+    }, speed);
+    return () => clearInterval(id);
+  }, [text, active, speed]);
+  return out;
+}
+
+export default function Section({ id, cmd, path = "~", children }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const typed = useTypewriter(cmd, inView);
+
+  return (
+    <section id={id} className="relative z-10 max-w-4xl mx-auto px-6 py-20 md:py-28">
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.5 }}
+      >
+        <Prompt path={path} cmd={typed} />
+        {children}
+      </motion.div>
+    </section>
+  );
+}
