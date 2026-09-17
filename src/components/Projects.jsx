@@ -5,7 +5,6 @@ import { useRef, useState } from "react";
 
 function GlowCard({ children, delay = 0 }) {
   const ref = useRef(null);
-
   const onMove = (e) => {
     const el = ref.current;
     if (!el) return;
@@ -13,7 +12,6 @@ function GlowCard({ children, delay = 0 }) {
     el.style.setProperty("--mx", `${e.clientX - rect.left}px`);
     el.style.setProperty("--my", `${e.clientY - rect.top}px`);
   };
-
   return (
     <motion.div
       ref={ref}
@@ -66,12 +64,12 @@ export default function Projects() {
                 href={p.link || "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="block border-b border-border"
+                className="block border-b border-border bg-black/20"
               >
                 <img
                   src={p.screenshot}
                   alt={`${p.name} screenshot`}
-                  className="w-full h-48 md:h-64 object-cover object-top opacity-90 hover:opacity-100 transition"
+                  className="w-full max-h-[500px] object-contain opacity-95 hover:opacity-100 transition"
                   loading="lazy"
                 />
               </a>
