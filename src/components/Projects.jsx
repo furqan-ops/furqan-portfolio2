@@ -1,4 +1,4 @@
-﻿import Section from "./Section";
+import Section from "./Section";
 import { projects } from "../data/portfolio";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
@@ -80,8 +80,8 @@ function ProjectCard({ p, i, flagship = false }) {
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
-  const flagship = projects.find((p) => p.name === "attendance-app");
-  const others = projects.filter((p) => p.name !== "attendance-app");
+  const flagship = projects.find((p) => p.name === "sentinelflow") || projects[0];
+  const others = projects.filter((p) => p !== flagship);
   const featuredOthers = others.filter((p) => p.featured);
   const restOthers = others.filter((p) => !p.featured);
 

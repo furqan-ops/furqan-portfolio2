@@ -1,4 +1,4 @@
-﻿export const profile = {
+export const profile = {
   prompt: "furqan@portfolio",
   name: "Muhammad Furqan Tahir",
   tagline: "I make computers do the boring stuff",
@@ -67,6 +67,37 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    name: "sentinelflow",
+    featured: true,
+    tags: ["Python", "Streamlit", "Gemini 2.0 Flash", "SQLite", "Multi-Agent AI"],
+    desc: "An autonomous incident response and self-healing system for data pipelines. A multi-agent fleet (Watchdog, Diagnostician, Remediator) automatically triages webhook failures, diagnoses root causes via Gemini 2.0 Flash, applies synthesized auto-patches, and tracks MTTR and SLA health on a real-time SaaS ops dashboard.",
+    link: "https://github.com/furqan-ops/sentinelflow",
+    linkLabel: "view github",
+    slides: [
+      { type: "image", src: "/projects/sentinelflow.png" },
+      {
+        type: "terminal",
+        title: "sentinelflow --fleet-status",
+        lines: [
+          "[*] Initializing SentinelFlow Multi-Agent Engine...",
+          "[OK] Watchdog Agent: Active (Ingesting Webhooks)",
+          "[OK] Diagnostician Agent: Ready (Gemini 2.0 Flash / RCA)",
+          "[OK] Remediator Agent: Armed (Auto-Heal & HITL)",
+          "[NEW] Incident INC-B2B79: HTTP 429 Too Many Requests detected",
+          "[*] Diagnostician Agent: Root cause diagnosed in 142ms",
+          "[OK] Remediator Agent: Auto-patch applied. Incident resolved",
+          "[OK] Fleet Active: 99.8% SLA uptime preserved",
+        ],
+      },
+      {
+        type: "code",
+        lang: "python",
+        title: "agents/orchestrator.py",
+        code: "class FleetOrchestrator:\n    def __init__(self):\n        self.watchdog = WatchdogAgent()\n        self.diagnostician = DiagnosticianAgent(model=\"gemini-2.0-flash\")\n        self.remediator = RemediatorAgent()\n\n    def process_event(self, event: dict):\n        incident = self.watchdog.triage(event)\n        diagnosis = self.diagnostician.analyze_root_cause(incident)\n        if diagnosis.confidence >= 0.90:\n            patch = self.remediator.auto_heal(incident, diagnosis)\n            return self.db.resolve_incident(incident.id, patch)\n        return self.escalate_to_human(incident, diagnosis)",
+      },
+    ],
+  },
   {
     name: "attendance-app",
     featured: true,
