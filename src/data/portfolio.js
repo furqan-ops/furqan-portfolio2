@@ -4,45 +4,58 @@ export const profile = {
   tagline: "I make computers do the boring stuff",
   location: "Rawalpindi, PK",
   status: "online",
-  role: "Software Engineer",
+  role: "Software Engineer — Automation & AI Agents",
   current: "Automation & Data @ Applivity",
   blurb:
-    "I build Python scripts and n8n workflows that replace repetitive work — resume parsers, scrapers, attendance systems. If a task is done the same way more than twice, I automate it.",
+    "I build autonomous AI agents, resilient Python automations, and enterprise n8n workflows that eliminate repetitive work. From self-healing incident fleets (SentinelFlow) to full-stack attendance systems and document extraction engines, I turn manual bottlenecks into scalable, zero-maintenance systems.",
   email: "furqantahir2222@gmail.com",
   phone: "+92 315 0727514",
   github: "https://github.com/furqan-ops",
 };
 
 export const stats = [
-  { value: 7, suffix: "", label: "Tools built & shipped" },
-  { value: 5000, suffix: "+", label: "Records cleaned" },
-  { value: 24, suffix: "/7", label: "Automations running" },
+  { value: 8, suffix: "+", label: "Production Tools Shipped" },
+  { value: 10000, suffix: "+", label: "Records Processed & Cleaned" },
+  { value: 99, suffix: ".8%", label: "Average SLA & Uptime" },
+  { value: 24, suffix: "/7", label: "Autonomous Uptime" },
 ];
 
 export const about = [
-  "I'm a software engineer who builds automations — mostly Python scripts and n8n workflows that connect the tools teams already use. I've shipped resume parsers, RFP scrapers, PDF extractors, and a full attendance system, all end-to-end. If accuracy matters and the work is repetitive, that's my kind of problem.",
+  "I'm a software engineer specializing in autonomous workflow automation, multi-agent AI systems, and robust data pipelines. Whether it's orchestrating self-healing incident response fleets with Gemini 2.0, designing enterprise n8n workflows, or shipping custom internal web tools, I focus on turning complex, manual operations into automated, reliable systems.",
+  "At Applivity, I've built end-to-end production tools that teams rely on daily — including full-stack attendance systems, intelligent resume parsing pipelines with validation checks, and automated RFP lead scanners. I don't just write scripts; I build resilient systems with proper error-handling, logging, and confidence checks so they run without babysitting.",
+  "When I'm not writing code, I'm analyzing workflows to identify bottlenecks. If a repetitive business process takes more than 15 minutes a day, my immediate instinct is to write a script or build an autonomous agent to handle it permanently.",
 ];
 
 export const services = [
   {
+    cmd: "ai.agent",
+    title: "Autonomous AI Agents",
+    desc: "Multi-agent systems powered by Gemini 2.0 Flash and LLMs that triage events, perform root cause analysis (RCA), and execute automated remediation without manual intervention.",
+  },
+  {
     cmd: "automation.build",
-    title: "Workflow automation",
-    desc: "n8n workflows that connect Drive, Sheets, Gmail, and other tools — so data moves on its own instead of someone copy-pasting it.",
+    title: "Workflow Automation",
+    desc: "Production n8n workflows connecting Drive, Sheets, Gmail, Slack, and REST APIs — with error logging and confidence checks so data moves reliably on its own.",
   },
   {
     cmd: "python.run",
-    title: "Python scripts",
-    desc: "Scrapers, PDF parsers, data cleaners, desktop tools. Built to run on a schedule or on demand, without supervision.",
+    title: "Python Scripts & Microservices",
+    desc: "Resilient web scrapers (Selenium/Playwright), PDF extractors, automated data cleaners, and FastAPI services built to run reliably on schedules or event triggers.",
+  },
+  {
+    cmd: "dashboard.saas",
+    title: "Interactive Ops Dashboards",
+    desc: "Real-time SaaS dashboards (Streamlit, React) tracking SLA health, pipeline throughput, and MTTR benchmarks with live telemetry visualization.",
   },
   {
     cmd: "integration.api",
-    title: "API integrations",
-    desc: "Wiring tools together through REST APIs and OAuth — Google Workspace, LLM providers, internal dashboards.",
+    title: "API Integrations",
+    desc: "Wiring platforms together through REST APIs, Webhooks, and OAuth 2.0 — Google Workspace, LLM providers, and internal databases.",
   },
   {
     cmd: "data.pipeline",
-    title: "Data pipelines",
-    desc: "Pulling messy data in, cleaning it, deduplicating, and pushing it out somewhere useful — usually a dashboard or a sheet.",
+    title: "Data Pipelines & Analytics",
+    desc: "Pulling messy data in, cleaning, deduplicating, and delivering to Power BI dashboards and databases for automated decision-making.",
   },
 ];
 
@@ -151,30 +164,96 @@ export const projects = [
 ];
 
 export const skills = {
-  languages: ["Python", "JavaScript", "SQL", "HTML/CSS"],
-  automation: ["n8n", "Google Apps Script", "Selenium", "Docker", "API / OAuth"],
-  "data & ai": ["Gemini API", "Power BI", "pandas", "pdfplumber", "Excel", "Web Scraping"],
-  tools: ["Cursor", "VS Code", "Git", "OpenCATS", "ERPNext"],
+  "AI Agents & LLMs": [
+    "Multi-Agent Orchestration",
+    "Gemini 2.0 / 1.5 Flash",
+    "Groq / Llama 3.3",
+    "Claude & OpenAI APIs",
+    "Autonomous Self-Healing (RCA)",
+    "Structured Outputs (JSON Schema)",
+    "Prompt Engineering",
+    "Tool Use & Function Calling",
+  ],
+  "Workflow Automation": [
+    "n8n (Self-Hosted & Cloud)",
+    "Google Apps Script",
+    "Webhooks & Event Triggers",
+    "Selenium & Playwright",
+    "REST APIs & OAuth 2.0",
+    "Cron & Scheduled Jobs",
+    "Telegram & Slack Bots",
+  ],
+  "Languages & Frameworks": [
+    "Python (Asyncio, FastAPI)",
+    "JavaScript (ES6+) & React",
+    "Streamlit (SaaS Dashboards)",
+    "SQL (PostgreSQL, SQLite)",
+    "HTML5 / CSS3 / Tailwind",
+    "Bash & PowerShell",
+  ],
+  "Data Engineering & BI": [
+    "Pandas & NumPy",
+    "Power BI (DAX & Data Modeling)",
+    "pdfplumber & Regex Parsing",
+    "Data Cleaning & Deduplication",
+    "ETL Pipelines",
+    "Excel & Sheets Advanced",
+  ],
+  "Cloud & Databases": [
+    "SQLite3",
+    "Supabase & PostgreSQL",
+    "Firebase & Firestore",
+    "Docker & Containers",
+    "Vercel & Cloudflare",
+    "Google Cloud Platform",
+  ],
+  "Developer Tools & Ops": [
+    "Git & GitHub (CI/CD)",
+    "Cursor & VS Code",
+    "Postman & cURL",
+    "Linux / Shell",
+    "OpenCATS",
+    "ERPNext",
+  ],
 };
 
 export const process = [
   { step: "01", title: "Look at the problem", desc: "Find out what's actually manual or broken before writing anything." },
-  { step: "02", title: "Pick the right tool", desc: "n8n when it's just orchestration. Python when there's real work to do. Apps Script when it lives inside Google." },
-  { step: "03", title: "Build it", desc: "Error handling, logging, and checks so it doesn't fail silently." },
-  { step: "04", title: "Test on real data", desc: "Run it against messy inputs. Fix whatever breaks." },
-  { step: "05", title: "Ship and watch", desc: "Deploy it, keep an eye on it, and fix issues as they come up." },
+  { step: "02", title: "Pick the right tool", desc: "n8n when it's orchestration. Python when there's real compute. Apps Script inside Google. LLMs when reasoning is needed." },
+  { step: "03", title: "Build with resilience", desc: "Strict type checks, structured logging, retries, and confidence layers so it never fails silently." },
+  { step: "04", title: "Test on edge cases", desc: "Run against real-world malformed inputs. Fix every failure mode before shipping." },
+  { step: "05", title: "Ship and monitor", desc: "Deploy with live telemetry, automated health alerts, and self-healing agent recovery." },
 ];
 
 export const certifications = [
-  "n8n Workflow Automation",
+  "n8n Workflow Automation Expert",
   "Microsoft Power BI Data Analytics",
-  "Power BI for Beginners",
+  "Google Cloud Generative AI Fundamentals",
+  "Python for Data Science & Automation",
+  "Prompt Engineering for Enterprise LLMs",
 ];
 
 export const faq = [
-  { q: "What kind of roles are you open to?", a: "Software engineering, automation engineering, and AI-adjacent roles. Remote or hybrid — anywhere Python, n8n, or workflow automation is central to the work." },
-  { q: "Do you work remotely?", a: "Yes. I've been working remote-first with distributed teams, mostly async on Slack and Jira." },
-  { q: "What's your main stack?", a: "n8n for orchestration, Python for scraping and data work, Google Apps Script for anything that lives inside Google Workspace, and LLM APIs (Gemini, Claude) when AI helps." },
+  {
+    q: "What kind of roles are you open to?",
+    a: "Software engineering, automation engineering, and AI-adjacent roles. Remote or hybrid — anywhere Python, n8n, AI agents, or workflow automation is central to the work.",
+  },
+  {
+    q: "Do you work remotely?",
+    a: "Yes. I work remote-first with distributed international teams, primarily async on GitHub, Slack, and Jira.",
+  },
+  {
+    q: "How do your automations handle reliability and unexpected failures?",
+    a: "Every automation I build incorporates defense-in-depth: confidence validation checks, structured error logging, automated retries with exponential backoff, and instant alert dispatches. In projects like SentinelFlow, autonomous agents diagnose root causes and auto-patch issues in real-time.",
+  },
+  {
+    q: "What's your main technology stack?",
+    a: "Python (Asyncio, FastAPI, Streamlit) for heavy compute and agent logic, n8n for workflow orchestration, Gemini/Groq APIs for generative reasoning, Google Apps Script for Workspace automation, and modern React/Vite for frontend interfaces.",
+  },
+  {
+    q: "Can you build full web apps or just backend automations?",
+    a: "Both. While my core strength is backend automation and AI agents, I regularly design and ship complete full-stack web applications and SaaS ops centers (Streamlit, React, Firebase, Google Apps Script) tailored for business operations.",
+  },
 ];
 
 export const footer = { message: "build · ship · automate · repeat" };

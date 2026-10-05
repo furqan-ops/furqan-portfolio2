@@ -1,4 +1,4 @@
-﻿import { motion, useInView, useMotionValue, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { stats } from "../data/portfolio";
 
@@ -28,7 +28,7 @@ function Counter({ value, suffix }) {
 export default function Stats() {
   return (
     <section className="relative z-10 max-w-4xl mx-auto px-6 pb-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((s, i) => (
           <motion.div
             key={s.label}
