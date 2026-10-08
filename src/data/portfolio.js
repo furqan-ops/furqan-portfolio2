@@ -112,6 +112,37 @@ export const projects = [
     ],
   },
   {
+    name: "apex-dental-ai",
+    featured: true,
+    tags: ["Meta WhatsApp Cloud API", "Google Gemini 3.5 Flash", "n8n", "Vercel Edge", "Tailwind CSS"],
+    desc: "An enterprise omnichannel AI front-desk receptionist and 24/7 automated WhatsApp booking system for a private dental clinic. Features real-time clinical triage, dynamic fee quotes ($80 cleaning, $250 whitening, $0 consultation), and autonomous multi-step intake. Deployed on Vercel Edge Serverless functions with sub-50ms Meta webhook response time, instant retry deduplication, and zero hosting costs.",
+    link: "https://apex-dental-clinic-theta.vercel.app/",
+    linkLabel: "view live",
+    slides: [
+      { type: "image", src: "/projects/apex-dental-clinic.png" },
+      { type: "image", src: "/projects/apex-dental-mobile.png" },
+      {
+        type: "terminal",
+        title: "apex-receptionist --telemetry",
+        lines: [
+          "[*] Ingesting Meta WhatsApp Webhook: 200 OK (34ms)",
+          "[OK] Patient Connected: +92 325 5997229 (wamid.HBgMOTIz...)",
+          "[*] Reasoning Engine: Gemini 3.5 Flash Lite invoked",
+          "[TRIAGE] Intent: In-Office Laser Teeth Whitening Inquiry ($250)",
+          "[INTAKE] Captured: Patient Name, Phone, Desired Slot (Tomorrow 2:00 PM)",
+          "[DISPATCH] Meta Graph API: Outbound reply delivered to WhatsApp",
+          "[OK] 24/7 Edge Fleet: Active | $0.00 Monthly Cost | 99.99% Uptime",
+        ],
+      },
+      {
+        type: "code",
+        lang: "javascript",
+        title: "api/webhook.js",
+        code: "// Vercel Edge Serverless WhatsApp AI Receptionist\nexport default async function handler(req, res) {\n  if (req.method === 'GET') {\n    return verifyMetaChallenge(req, res);\n  }\n  const { from, text, messageId } = extractWhatsAppPayload(req.body);\n  if (isDuplicate(messageId)) return res.status(200).send('DUPLICATE_IGNORED');\n\n  // Generate medical-grade response via Gemini 3.5 Flash\n  const reply = await callGemini(from, text);\n  await sendWhatsApp(from, reply);\n  return res.status(200).send('EVENT_RECEIVED');\n}",
+      },
+    ],
+  },
+  {
     name: "attendance-app",
     featured: true,
     tags: ["Google Apps Script", "JavaScript", "Firebase", "Sheets"],
@@ -166,7 +197,8 @@ export const projects = [
 export const skills = {
   "AI Agents & LLMs": [
     "Multi-Agent Orchestration",
-    "Gemini 2.0 / 1.5 Flash",
+    "Gemini 3.5 / 2.0 Flash",
+    "Conversational Intake AI",
     "Groq / Llama 3.3",
     "Claude & OpenAI APIs",
     "Autonomous Self-Healing (RCA)",
@@ -175,13 +207,14 @@ export const skills = {
     "Tool Use & Function Calling",
   ],
   "Workflow Automation": [
-    "n8n (Self-Hosted & Cloud)",
+    "Meta WhatsApp Cloud API",
+    "n8n (Self-Hosted & Docker)",
     "Google Apps Script",
     "Webhooks & Event Triggers",
+    "WhatsApp & Telegram Bots",
     "Selenium & Playwright",
     "REST APIs & OAuth 2.0",
     "Cron & Scheduled Jobs",
-    "Telegram & Slack Bots",
   ],
   "Languages & Frameworks": [
     "Python (Asyncio, FastAPI)",
@@ -200,11 +233,12 @@ export const skills = {
     "Excel & Sheets Advanced",
   ],
   "Cloud & Databases": [
+    "Vercel Edge & Serverless",
+    "Cloudflare Tunnels",
     "SQLite3",
     "Supabase & PostgreSQL",
     "Firebase & Firestore",
     "Docker & Containers",
-    "Vercel & Cloudflare",
     "Google Cloud Platform",
   ],
   "Developer Tools & Ops": [
